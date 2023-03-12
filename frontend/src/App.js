@@ -9,7 +9,7 @@ import ToDoList from "./components/ToDo";
 import Footer from "./components/Footer.js";
 import Menu from "./components/Menu.js";
 
-const DOMAIN = 'http://127.0.0.1:8001/api/'
+const DOMAIN = 'http://127.0.0.1:8000/api/'
 const get_url = (url) => `${DOMAIN}${url}`
 
 
@@ -47,7 +47,7 @@ class App extends React.Component {
         axios.get(get_url('notes/'))
             .then(response => {
                 //console.log(response.data)
-                this.setState({todos: response.data.results})
+                this.setState({notes: response.data.results})
             }).catch(error => console.log(error))
     }
 
@@ -59,9 +59,15 @@ class App extends React.Component {
                 <div className="App">
 
                     <Switch>
-                        <Route exact path='/' component={() => <UserList items={this.state.users} />} />
-                        <Route exact path='/projects' component={() => <ProjectList items={this.state.users} />} />
-                        <Route exact path='/notes' component={() => <ToDoList items={this.state.users} />} />
+                        <Route exact path='/'>
+                                <UserList items={this.state.users}/>
+                            </Route>
+                        <Route exact path='/projects'>
+                                <ProjectList items={this.state.projects}/>
+                            </Route>
+                        <Route exact path='/notes'>
+                                <ProjectList items={this.state.notes}/>
+                            </Route>
                         <Route component={NotFound404} />
 
                     </Switch>

@@ -127,10 +127,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 AUTH_USER_MODEL = "usersapp.User"
 
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:3000",
-    "http://127.0.0.1:37745",
     "http://localhost:3000",
-    "http://localhost:37745",
 ]
 
 REST_FRAMEWORK = {
