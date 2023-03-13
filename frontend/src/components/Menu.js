@@ -1,15 +1,17 @@
+import {Link} from "react-router-dom";
+
 function Menu() {
     return (
         <div className="Menu">
             <ul>
                 <li>
-                    <a href='#'>TODO</a>
+                    <Link to='/'>Users</Link>
                 </li>
                 <li>
-                    <a href='#'>About us</a>
+                    <Link to='/projects/'>Projects</Link>
                 </li>
                 <li>
-                    <a href='#'>Contacts</a>
+                    <Link to='/notes/'>Notes</Link>
                 </li>
 
             </ul>

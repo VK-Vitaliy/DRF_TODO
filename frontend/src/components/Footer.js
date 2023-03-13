@@ -1,7 +1,7 @@
 function Footer(){
     return(
         <div className="Footer-site_footer">
-            <b>React site</b>
+            <p>React site</p>
             </div>
             );
 

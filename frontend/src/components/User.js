@@ -1,25 +1,25 @@
 import React from "react";
 
-const UserItem = ({user}) => {
+const UserItem = ({item}) => {
     return (
         <tr>
-            <td>{user.username}</td>
-            <td>{user.first_name}</td>
-            <td>{user.last_name}</td>
-            <td>{user.email}</td>
+            <td>{item.username}</td>
+            <td>{item.first_name}</td>
+            <td>{item.last_name}</td>
+            <td>{item.email}</td>
         </tr>
     )
 
 }
 
-const UserList = ({users}) => {
+const UserList = ({items}) => {
     return (
         <table>
             <th>Username</th>
             <th>First name</th>
             <th>Last name</th>
             <th>Email</th>
-            {users.map((user) => <UserItem user={user}/>)}
+            {items.map((item) => <UserItem item={item}/>)}
         </table>
     )
 
